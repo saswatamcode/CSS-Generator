@@ -25,8 +25,8 @@ function Tabs() {
         <div className='tabs'>
             <TabContainer>
                 <Tab>Style a button</Tab>
-                <Tab>Style a button</Tab>
-                <Tab>Style a button</Tab>
+                <Tab>Style a div</Tab>
+                <Tab>Style a link</Tab>
             </TabContainer>
         </div>
     );
