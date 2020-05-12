@@ -1,8 +1,16 @@
 import React from "react";
+import styled from 'styled-components'
+
+const Title = styled.h1`
+    font-family: 'Roboto Mono', monospace,
+    text-align: center;
+`;
 
 function Header() {
     return(
-        <h1>CSS Generator</h1>
+        <Title>
+            CSS Generator
+        </Title>
     );
 }
 
