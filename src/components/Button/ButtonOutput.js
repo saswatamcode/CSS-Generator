@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 const ButtonOutputDiv = styled.div`
   background: #fff;
@@ -12,35 +14,30 @@ const ButtonOutputDiv = styled.div`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `;
 
-const CodeDiv = styled.div`
+const SectionLabel = styled.div`
   font-family: "Roboto Mono", monospace;
-  font-size: 1rem;
+  font-size: 1.25rem;
   margin: 0.25rem;
-  margin-left: 0.75rem;
-  font-weight: 400;
+  font-weight: 700;
 `;
 
 function ButtonOutput(props) {
+  const codeString = `
+    border-radius: ${props.borderRadius}%;
+    border: ${props.borderSize}px solid greenyellow;
+    padding: ${props.verticalSize}px ${props.horizontalSize}px;
+    color: white;
+    background: green;
+    font-size:${props.fontSize}px;
+    display: inline-block;
+    cursor: pointer;
+    `;
   return (
     <ButtonOutputDiv>
-      <CodeDiv>
-        <br />
-        border-radius: {props.borderRadius}%;
-        <br />
-        border: {props.borderSize}px solid greenyellow;
-        <br />
-        padding: {props.verticalSize}px {props.horizontalSize}px;
-        <br />
-        color: white;
-        <br />
-        background: green;
-        <br />
-        font-size:{props.fontSize}px;
-        <br />
-        display: inline-block;
-        <br />
-        cursor: pointer;
-      </CodeDiv>
+      <SectionLabel>Code</SectionLabel>
+      <SyntaxHighlighter language="css" style={dark}>
+        {codeString}
+      </SyntaxHighlighter>
     </ButtonOutputDiv>
   );
 }
