@@ -20,13 +20,12 @@ const TabContainer = styled.div`
     padding: 2rem;
 `;
 
-function Tabs() {
+function Tabs(props) {
     return(
         <div className='tabs'>
             <TabContainer>
-                <Tab>Style a button</Tab>
-                <Tab>Style a div</Tab>
-                <Tab>Style a link</Tab>
+                <Tab onClick={() => props.switchFunction('btn')}>Style a button</Tab>
+                <Tab onClick={() => props.switchFunction('div')}>Style a div</Tab>
             </TabContainer>
         </div>
     );
