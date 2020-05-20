@@ -11,6 +11,9 @@ const Tab = styled.button`
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
+    :focus {
+        outline: none;
+    }
 `;
 
 const TabContainer = styled.div`
@@ -26,6 +29,7 @@ function Tabs(props) {
             <TabContainer>
                 <Tab onClick={() => props.switchFunction('btn')}>Style a button</Tab>
                 <Tab onClick={() => props.switchFunction('div')}>Style a div</Tab>
+                <Tab onClick={() => props.switchFunction('link')}>Style a link</Tab>
             </TabContainer>
         </div>
     );

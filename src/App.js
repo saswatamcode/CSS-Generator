@@ -3,15 +3,16 @@ import Header from './components/Header';
 import Tabs from './components/Tabs';
 import ButtonOption from './components/Button/ButtonOption';
 import DivOption from './components/Div/DivOption'
+import LinkOption from './components/Link/LinkOption';
 
 function App() {
-  const [btnDivSwitch, setBtnDivSwitch] = useState("btn");
+  const [btnDivLinkSwitch, setBtnDivLinkSwitch] = useState("btn");
 
   return (
     <div className="App">
       <Header />
-      <Tabs switchFunction= {setBtnDivSwitch} />
-      { btnDivSwitch === 'btn' ? <ButtonOption /> : <DivOption/>}
+      <Tabs switchFunction= {setBtnDivLinkSwitch} />
+      { btnDivLinkSwitch === 'btn' ? <ButtonOption /> : btnDivLinkSwitch === 'div' ? <DivOption/> : <LinkOption />}
     </div>
   );
 }
