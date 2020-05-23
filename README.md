@@ -1,7 +1,8 @@
-# CSS Generator
+# CSS Generator 🖌️
 
-A simple project which will help developers design web elements and generate the equivalent CSS for it. Built by the 
-**Web Team - DSC KIIT**,
+A simple project which will help developers design web elements and generate the equivalent CSS for it. 
+
+Built by the **Web Team - DSC KIIT**.
 
 
 ## Development Setup
